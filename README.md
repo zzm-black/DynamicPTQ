@@ -1,6 +1,6 @@
-# DynmicPTQ
+# DynamicPTQ
 
-DynmicPTQ is a unified PTQ project for running DEEP mixed-precision quantization experiments
+DynamicPTQ is a unified PTQ project for running DEEP mixed-precision quantization experiments
 across three backends with a single launcher and aligned runtime options.
 
 - `FlatQuant`
@@ -9,7 +9,7 @@ across three backends with a single launcher and aligned runtime options.
 
 ## Repository Layout
 
-- `scripts/DynmicPTQ.sh`: backend dispatcher
+- `scripts/DynamicPTQ.sh`: backend dispatcher
 - `scripts/run_flatquant.sh`: FlatQuant runner
 - `scripts/run_spinquant.sh`: SpinQuant runner
 - `scripts/run_quarot.sh`: QuaRot runner
@@ -27,14 +27,14 @@ across three backends with a single launcher and aligned runtime options.
 ## Quick Start
 
 ```bash
-cd DynmicPTQ
+cd DynamicPTQ
 ```
 
-### Create and activate the `DynmicPTQ` environment
+### Create and activate the `DynamicPTQ` environment
 
 ```bash
-conda create -n DynmicPTQ python=3.10 -y
-conda activate DynmicPTQ
+conda create -n DynamicPTQ python=3.10 -y
+conda activate DynamicPTQ
 pip install -r requirements.txt
 ```
 
@@ -47,7 +47,7 @@ export HF_TOKEN="your_hf_token"
 ### Run with defaults
 
 ```bash
-bash scripts/DynmicPTQ.sh
+bash scripts/DynamicPTQ.sh
 ```
 
 ### Direct backend scripts (recommended for clarity)
@@ -112,7 +112,7 @@ MODEL_PATH=meta-llama/Meta-Llama-3-8B \
 bash scripts/run_quarot.sh
 ```
 
-### DynmicPTQ runs with DEEP enabled (`METHOD=rtn|gptq`)
+### DynamicPTQ runs with DEEP enabled (`METHOD=rtn|gptq`)
 
 Use the unified launcher to enable DEEP. Both RTN and GPTQ support DEEP when
 `ENABLE_DEEP=true`.
@@ -122,7 +122,7 @@ Use the unified launcher to enable DEEP. Both RTN and GPTQ support DEEP when
 BACKEND=flatquant METHOD=rtn \
 ENABLE_DEEP=true DEEP_LAYERS=0,1,2,31 DEEP_ACT_BITS=8 \
 MODEL_PATH=meta-llama/Meta-Llama-3-8B \
-bash scripts/DynmicPTQ.sh
+bash scripts/DynamicPTQ.sh
 ```
 
 ```bash
@@ -130,7 +130,7 @@ bash scripts/DynmicPTQ.sh
 BACKEND=flatquant METHOD=gptq \
 ENABLE_DEEP=true DEEP_LAYERS=0,1,2,31 DEEP_ACT_BITS=8 \
 MODEL_PATH=meta-llama/Meta-Llama-3-8B \
-bash scripts/DynmicPTQ.sh
+bash scripts/DynamicPTQ.sh
 ```
 
 ## Calibration And Evaluation Data Guide
@@ -174,7 +174,7 @@ NSAMPLES=128 \
 EVAL_DATASETS="wikitext2 c4" \
 RUN_LM_EVAL=true \
 LM_EVAL_TASKS="piqa hellaswag arc_easy arc_challenge winogrande lambada_openai" \
-bash scripts/DynmicPTQ.sh
+bash scripts/DynamicPTQ.sh
 ```
 
 ## Backbone-Specific Notes
@@ -225,7 +225,7 @@ from the current integrated runtime behavior in this repository.
 ```bash
 OUTPUT_DIR=./outputs \
 EXP_NAME=flatquant_gptq_llama3_8b \
-bash scripts/DynmicPTQ.sh
+bash scripts/DynamicPTQ.sh
 ```
 
 Files generated for FlatQuant unified runs are placed directly under that run

@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WORKSPACE_ROOT="${WORKSPACE_ROOT:-$(cd "${SCRIPT_DIR}/.." && pwd)}"
 
-CONDA_ENV_NAME="${CONDA_ENV_NAME:-DynmicPTQ}"
+CONDA_ENV_NAME="${CONDA_ENV_NAME:-DynamicPTQ}"
 if command -v conda >/dev/null 2>&1; then
   eval "$(conda shell.bash hook)"
 elif [[ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]]; then

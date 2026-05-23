@@ -3,10 +3,10 @@ set -euo pipefail
 
 usage() {
   cat <<'EOF'
-DynmicPTQ launcher dispatcher
+DynamicPTQ launcher dispatcher
 
 Usage:
-  bash scripts/DynmicPTQ.sh [--backend flatquant|spinquant|quarot] [extra args]
+  bash scripts/DynamicPTQ.sh [--backend flatquant|spinquant|quarot] [extra args]
 
 This script only dispatches to backend-specific scripts:
   - scripts/run_flatquant.sh
@@ -15,10 +15,10 @@ This script only dispatches to backend-specific scripts:
 
 Examples:
   BACKEND=flatquant METHOD=gptq DEEP_LAYERS=0,1,2,31 MODEL_PATH=meta-llama/Meta-Llama-3-8B \
-    bash scripts/DynmicPTQ.sh
+    bash scripts/DynamicPTQ.sh
 
   BACKEND=spinquant METHOD=rtn MODEL_PATH=meta-llama/Meta-Llama-3-8B OPTIMIZED_ROTATION_PATH=/path/to/R.bin \
-    bash scripts/DynmicPTQ.sh
+    bash scripts/DynamicPTQ.sh
 EOF
 }
 
