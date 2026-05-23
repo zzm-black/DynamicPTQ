@@ -1,0 +1,2 @@
+# CMAKE generated file: DO NOT EDIT!
+# Timestamp file for compiler generated dependencies management for cutlass_library_gemm_sm100_bf16_s256x128x16gemm_bf16_objs.

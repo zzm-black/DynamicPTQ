@@ -1,0 +1,1 @@
+/usr/bin/g++ @CMakeFiles/47_ampere_gemm_universal_streamk.dir/objects1.rsp -o 47_ampere_gemm_universal_streamk @CMakeFiles/47_ampere_gemm_universal_streamk.dir/linkLibs.rsp -L"/usr/local/cuda-13.0/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda-13.0/targets/x86_64-linux/lib"

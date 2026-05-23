@@ -1,0 +1,1 @@
+-I"/home/zmzhao6/EMNLP/FlatQuant/third-party/cutlass/include" -I"/home/zmzhao6/EMNLP/FlatQuant/third-party/cutlass/examples/common" -I"/home/zmzhao6/EMNLP/FlatQuant/third-party/cutlass/examples/77_blackwell_fmha" -I"/home/zmzhao6/EMNLP/FlatQuant/third-party/cutlass/tools/util/include" -isystem "/usr/local/cuda-13.0/include"
